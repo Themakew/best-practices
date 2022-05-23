@@ -1,11 +1,11 @@
-# Template iOS App using Clean Architecture and MVVM-C
+# An Example of an iOS App using Clean Architecture and MVVM-C
 
 [![Swift 5.6](https://img.shields.io/badge/Swift-5.6-orange.svg?style=flat)](https://swift.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
-BestPractices is an example app with best practices in a mobile app development
-conquered by my years of experience as an iOS Engineer.
+BestPractices is an example app with best practices in mobile app development 
+conquered by my years of experience as an iOS engineer.
 
 ## Architecture
 
