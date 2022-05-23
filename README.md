@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# best-practices
-=======
 # Template iOS App using Clean Architecture and MVVM-C
 
 [![Swift 5.6](https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat)](https://swift.org/)
@@ -41,4 +38,3 @@ In progress...
 ## Licence
 
 In progress...
->>>>>>> 59519f0 (Structuring the app's folders based on clean architecture)
