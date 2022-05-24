@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		569BFC93283C174500E05AF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 569BFC95283C174500E05AF3 /* Localizable.strings */; };
+		569BFCA4283C794200E05AF3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 569BFCA3283C794200E05AF3 /* RxCocoa */; };
+		569BFCA6283C794200E05AF3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 569BFCA5283C794200E05AF3 /* RxRelay */; };
+		569BFCA8283C794200E05AF3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 569BFCA7283C794200E05AF3 /* RxSwift */; };
 		56EDA3CF282DE9BA00924085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDA3CE282DE9BA00924085 /* AppDelegate.swift */; };
 		56EDA3D1282DE9BA00924085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDA3D0282DE9BA00924085 /* SceneDelegate.swift */; };
 		56EDA3D3282DE9BA00924085 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDA3D2282DE9BA00924085 /* ViewController.swift */; };
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569BFCA8283C794200E05AF3 /* RxSwift in Frameworks */,
+				569BFCA6283C794200E05AF3 /* RxRelay in Frameworks */,
+				569BFCA4283C794200E05AF3 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +237,11 @@
 			dependencies = (
 			);
 			name = BestPractice;
+			packageProductDependencies = (
+				569BFCA3283C794200E05AF3 /* RxCocoa */,
+				569BFCA5283C794200E05AF3 /* RxRelay */,
+				569BFCA7283C794200E05AF3 /* RxSwift */,
+			);
 			productName = BestPractice;
 			productReference = 56EDA3CB282DE9BA00924085 /* BestPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -303,6 +314,9 @@
 				Base,
 			);
 			mainGroup = 56EDA3C2282DE9BA00924085;
+			packageReferences = (
+				569BFCA2283C794200E05AF3 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 56EDA3CC282DE9BA00924085 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -525,6 +539,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BestPractice/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -552,6 +567,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BestPractice/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -684,6 +700,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		569BFCA2283C794200E05AF3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		569BFCA3283C794200E05AF3 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 569BFCA2283C794200E05AF3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		569BFCA5283C794200E05AF3 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 569BFCA2283C794200E05AF3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		569BFCA7283C794200E05AF3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 569BFCA2283C794200E05AF3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56EDA3C3282DE9BA00924085 /* Project object */;
 }
