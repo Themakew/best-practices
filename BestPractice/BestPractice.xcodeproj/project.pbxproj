@@ -228,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56EDA3F5282DE9BC00924085 /* Build configuration list for PBXNativeTarget "BestPractice" */;
 			buildPhases = (
+				56BF3B9A283D499B005A5BCA /* Lint Script */,
 				56EDA3C7282DE9BA00924085 /* Sources */,
 				56EDA3C8282DE9BA00924085 /* Frameworks */,
 				56EDA3C9282DE9BA00924085 /* Resources */,
@@ -354,6 +355,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56BF3B9A283D499B005A5BCA /* Lint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Lint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "../Scripts/lint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56EDA3C7282DE9BA00924085 /* Sources */ = {

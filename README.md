@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
-BestPractices is an example app with best practices in mobile app development 
+BestPractice is an example app with best practices in mobile app development 
 conquered by my years of experience as an iOS engineer.
 
 ## Architecture
@@ -37,4 +37,4 @@ In progress...
 
 ## Licence
 
-BestPractices is available under the MIT license. See the LICENSE file for more info.
+BestPractice is available under the MIT license. See the LICENSE file for more info.
