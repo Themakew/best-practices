@@ -11,6 +11,8 @@
 		569BFCA4283C794200E05AF3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 569BFCA3283C794200E05AF3 /* RxCocoa */; };
 		569BFCA6283C794200E05AF3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 569BFCA5283C794200E05AF3 /* RxRelay */; };
 		569BFCA8283C794200E05AF3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 569BFCA7283C794200E05AF3 /* RxSwift */; };
+		56BF3B9D283D681E005A5BCA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF3B9C283D681E005A5BCA /* AppCoordinator.swift */; };
+		56BF3BA0283ED5C0005A5BCA /* XCoordinatorRx in Frameworks */ = {isa = PBXBuildFile; productRef = 56BF3B9F283ED5C0005A5BCA /* XCoordinatorRx */; };
 		56EDA3CF282DE9BA00924085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDA3CE282DE9BA00924085 /* AppDelegate.swift */; };
 		56EDA3D1282DE9BA00924085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDA3D0282DE9BA00924085 /* SceneDelegate.swift */; };
 		56EDA3D3282DE9BA00924085 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDA3D2282DE9BA00924085 /* ViewController.swift */; };
@@ -40,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		569BFC94283C174500E05AF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		56BF3B9C283D681E005A5BCA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		56EDA3CB282DE9BA00924085 /* BestPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EDA3CE282DE9BA00924085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56EDA3D0282DE9BA00924085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BF3BA0283ED5C0005A5BCA /* XCoordinatorRx in Frameworks */,
 				569BFCA8283C794200E05AF3 /* RxSwift in Frameworks */,
 				569BFCA6283C794200E05AF3 /* RxRelay in Frameworks */,
 				569BFCA4283C794200E05AF3 /* RxCocoa in Frameworks */,
@@ -96,6 +100,7 @@
 			children = (
 				56EDA3CE282DE9BA00924085 /* AppDelegate.swift */,
 				56EDA3D0282DE9BA00924085 /* SceneDelegate.swift */,
+				56BF3B9C283D681E005A5BCA /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 		569BFC88283C100500E05AF3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				56BF3B9B283D6809005A5BCA /* Coordinator */,
 				56EDA3D2282DE9BA00924085 /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -170,6 +176,13 @@
 				56EDA3DC282DE9BB00924085 /* Info.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		56BF3B9B283D6809005A5BCA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		56EDA3C2282DE9BA00924085 = {
@@ -242,6 +255,7 @@
 				569BFCA3283C794200E05AF3 /* RxCocoa */,
 				569BFCA5283C794200E05AF3 /* RxRelay */,
 				569BFCA7283C794200E05AF3 /* RxSwift */,
+				56BF3B9F283ED5C0005A5BCA /* XCoordinatorRx */,
 			);
 			productName = BestPractice;
 			productReference = 56EDA3CB282DE9BA00924085 /* BestPractice.app */;
@@ -317,6 +331,7 @@
 			mainGroup = 56EDA3C2282DE9BA00924085;
 			packageReferences = (
 				569BFCA2283C794200E05AF3 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				56BF3B9E283ED5C0005A5BCA /* XCRemoteSwiftPackageReference "XCoordinator" */,
 			);
 			productRefGroup = 56EDA3CC282DE9BA00924085 /* Products */;
 			projectDirPath = "";
@@ -382,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BF3B9D283D681E005A5BCA /* AppCoordinator.swift in Sources */,
 				56EDA3D3282DE9BA00924085 /* ViewController.swift in Sources */,
 				56EDA3CF282DE9BA00924085 /* AppDelegate.swift in Sources */,
 				56EDA3D1282DE9BA00924085 /* SceneDelegate.swift in Sources */,
@@ -732,6 +748,14 @@
 				version = 6.5.0;
 			};
 		};
+		56BF3B9E283ED5C0005A5BCA /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quickbirdstudios/XCoordinator.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -749,6 +773,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 569BFCA2283C794200E05AF3 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		56BF3B9F283ED5C0005A5BCA /* XCoordinatorRx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56BF3B9E283ED5C0005A5BCA /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinatorRx;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
