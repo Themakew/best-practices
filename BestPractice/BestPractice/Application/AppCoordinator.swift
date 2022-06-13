@@ -25,8 +25,8 @@ final class AppCoordinator: NavigationCoordinator<AppRouter> {
     override func prepareTransition(for route: AppRouter) -> NavigationTransition {
         switch route {
         case .start:
-            // TODO: implement
-            let viewController = UIViewController()
+            let viewModel = EventListViewModel()
+            let viewController = EventListViewController(viewMoldel: viewModel)
             return .push(viewController)
         }
     }
