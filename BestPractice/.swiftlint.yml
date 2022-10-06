@@ -146,18 +146,6 @@ custom_rules:
         regex: '((?:\s*\n){3,})'
         message: "There are too many line breaks"
         severity: error
-    empty_line_after_opening_brace:
-        name: "Style Guide: No empty line at the beginning of element"
-        included: ".*\\.swift"
-        regex: '(^[ a-zA-Z ]*(?:extension|class|struct) (?!(?:var|let))[ a-zA-Z:]*\{\n *\S+)'
-        message: "There should have exactly 1 empty line at the beginning of classes/extensions/structs"
-        severity: error
-    empty_line_before_closing_brace:
-        name: "Style Guide: No empty line at the end of element"
-        included: ".*\\.swift"
-        regex: '\s{4}([}]\s{1}[}]\s$)'
-        message: "There should have exactly 1 empty line before the end of classes/extensions/structs"
-        severity: error
     explicit_empty_line_between_methods:
         name: "Style Guide: No empty line between methods"
         included: ".*\\.swift"
