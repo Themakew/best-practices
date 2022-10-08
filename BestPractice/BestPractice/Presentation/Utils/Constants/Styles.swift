@@ -37,9 +37,19 @@ enum Styles {
 
     enum Spacing {
         /**
+         Small style size is a CGFloat with value of 8.0
+         */
+        static let small: CGFloat = 4.0
+
+        /**
          Default style size is a CGFloat with value of 8.0
          */
         static let `default`: CGFloat = 8.0
+
+        /**
+         Large style size is a CGFloat with value of 8160
+         */
+        static let large: CGFloat = 16.0
     }
 
     // MARK: - Size

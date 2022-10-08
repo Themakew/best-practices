@@ -15,44 +15,12 @@ final class EventInfoView: UIView {
         $0.distribution = .fill
         $0.axis = .horizontal
         $0.alignment = .center
-        $0.spacing = Styles.Spacing.default
+        $0.spacing = Styles.Spacing.large
     }
 
-    private let locationIconImageView = UIImageView(translateMask: false).apply {
-        $0.contentMode = .scaleAspectFit
-    }
-
-    private let locationLabel = UILabel(translateMask: false).apply {
-        $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: Styles.Size.regular, weight: .regular)
-        $0.textAlignment = .left
-        $0.numberOfLines = 1
-        $0.lineBreakMode = .byTruncatingTail
-    }
-
-    private let dateIconImageView = UIImageView(translateMask: false).apply {
-        $0.contentMode = .scaleAspectFit
-    }
-
-    private let dateIconLabel = UILabel(translateMask: false).apply {
-        $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: Styles.Size.regular, weight: .regular)
-        $0.textAlignment = .left
-        $0.numberOfLines = 1
-        $0.lineBreakMode = .byTruncatingTail
-    }
-
-    private let priceIconImageView = UIImageView(translateMask: false).apply {
-        $0.contentMode = .scaleAspectFit
-    }
-
-    private let priceIconLabel = UILabel(translateMask: false).apply {
-        $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: Styles.Size.regular, weight: .regular)
-        $0.textAlignment = .left
-        $0.numberOfLines = 1
-        $0.lineBreakMode = .byTruncatingTail
-    }
+    private let locationDetailView = EventInfoDetailView(translateMask: false)
+    private let dateDetailView = EventInfoDetailView(translateMask: false)
+    private let priceDetailView = EventInfoDetailView(translateMask: false)
 
     // MARK: - Initializers
 
@@ -71,12 +39,9 @@ final class EventInfoView: UIView {
 
 extension EventInfoView: ViewCode {
     func buildViewHierarchy() {
-        baseStackView.addArrangedSubview(locationIconImageView)
-        baseStackView.addArrangedSubview(locationLabel)
-        baseStackView.addArrangedSubview(dateIconImageView)
-        baseStackView.addArrangedSubview(dateIconLabel)
-        baseStackView.addArrangedSubview(priceIconImageView)
-        baseStackView.addArrangedSubview(priceIconLabel)
+        baseStackView.addArrangedSubview(locationDetailView)
+        baseStackView.addArrangedSubview(dateDetailView)
+        baseStackView.addArrangedSubview(priceDetailView)
 
         addSubview(baseStackView)
     }
@@ -97,20 +62,14 @@ extension EventInfoView: Configurable {
     typealias Configuration = EventDescriptionContent
 
     struct EventDescriptionContent: Hashable {
-        let locationIconURL: URL
-        let locationText: String
-        let dateIconURL: URL
-        let dateIconText: String
-        let priceIconURL: URL
-        let priceIconText: String
+        let locationDetailContent: EventInfoDetailView.Configuration
+        let dateDetailContent: EventInfoDetailView.Configuration
+        let priceDetailContent: EventInfoDetailView.Configuration
     }
 
     func configure(content: Configuration) {
-//        locationIconImageView.image = content.locationIconImage
-        locationLabel.text = content.locationText
-//        dateIconImageView.image = content.dateIconImageView
-        dateIconLabel.text = content.dateIconText
-//        priceIconImageView.image = content.priceIconImage
-        priceIconLabel.text = content.priceIconText
+        locationDetailView.configure(content: content.locationDetailContent)
+        dateDetailView.configure(content: content.dateDetailContent)
+        priceDetailView.configure(content: content.priceDetailContent)
     }
 }
