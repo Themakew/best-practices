@@ -9,13 +9,15 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     private lazy var mainWindow = UIWindow()
     private let router = AppCoordinator().strongRouter
 
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
         configureUI()
+        mainWindow.backgroundColor = .white
         router.setRoot(for: mainWindow)
         return true
     }
@@ -23,5 +25,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configureUI() {
         UIView.appearance().overrideUserInterfaceStyle = .light
     }
-
 }

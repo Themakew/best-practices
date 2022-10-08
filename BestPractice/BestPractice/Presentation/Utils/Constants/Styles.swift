@@ -37,22 +37,31 @@ enum Styles {
 
     enum Spacing {
         /**
-         Default style size is a CGFloat with value of 4.0
+         Default style size is a CGFloat with value of 8.0
          */
-        static let `default`: CGFloat = 4.0
+        static let `default`: CGFloat = 8.0
     }
 
     // MARK: - Size
 
     enum Size {
         /**
-         Default style size is a CGFloat with value of 11.0
+         Default style size is a CGFloat with value of 13.0
          */
-        static let regular: CGFloat = 11.0
+        static let regular: CGFloat = 13.0
 
         /**
-         Default style size is a CGFloat with value of 12.0
+         Default style size is a CGFloat with value of 14.0
          */
-        static let `default`: CGFloat = 12.0
+        static let `default`: CGFloat = 14.0
+    }
+
+    // MARK: - Radius
+
+    enum Radius {
+        /**
+         Default style size is a CGFloat with value of 30.0
+         */
+        static let `default`: CGFloat = 30.0
     }
 }

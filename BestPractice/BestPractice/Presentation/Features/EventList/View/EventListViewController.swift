@@ -31,8 +31,6 @@ final class EventListViewController: UIViewController {
     init(viewMoldel: EventListViewModelProtocol) {
         self.viewModel = viewMoldel
         super.init(nibName: nil, bundle: nil)
-        setupView()
-        bind()
     }
 
     @available(*, unavailable)
@@ -44,7 +42,10 @@ final class EventListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        setupView()
+        bind()
+
+        navigationController?.navigationBar.topItem?.title = "Events"
     }
 
     // MARK: - Private Methods
