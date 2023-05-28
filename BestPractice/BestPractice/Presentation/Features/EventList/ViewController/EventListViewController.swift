@@ -17,6 +17,7 @@ final class EventListViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     private var dataSource: UICollectionViewDiffableDataSource<EventListViewModel.SectionType, EventListViewModel.Row>?
+
     private lazy var collectionViewLayout = buildCompositionalLayout()
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout).apply {
         $0.backgroundColor = .white
@@ -26,7 +27,7 @@ final class EventListViewController: UIViewController {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    // MARK: - Initializer
+    // MARK: - Initializers
 
     init(viewMoldel: EventListViewModelProtocol) {
         self.viewModel = viewMoldel
@@ -44,8 +45,6 @@ final class EventListViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         bind()
-
-        navigationController?.navigationBar.topItem?.title = "Events"
     }
 
     // MARK: - Private Methods
@@ -98,10 +97,11 @@ extension EventListViewController: ViewCode {
 extension EventListViewController {
     func bind() {
         bindDataSource()
+        bindViewModel()
     }
 }
 
-// MARK: - CollectionView DataSource Extension
+// MARK: - Binding Extension
 
 extension EventListViewController {
     func bindDataSource() {
@@ -131,6 +131,12 @@ extension EventListViewController {
             .subscribe(onNext: { [weak self] snapshot in
                 self?.dataSource?.apply(snapshot, animatingDifferences: false)
             })
+            .disposed(by: disposeBag)
+    }
+
+    func bindViewModel() {
+        viewModel.output.screenTitle
+            .drive(rx.title)
             .disposed(by: disposeBag)
     }
 }

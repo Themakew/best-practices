@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 protocol EventListViewModelProtocol {
     var input: EventListViewModelInput { get }
@@ -20,6 +21,7 @@ protocol EventListViewModelOutput {
     typealias DataSource = KeyValuePairs<EventListViewModel.SectionType, [EventListViewModel.Row]>
 
     var dataSource: ReplaySubject<DataSource> { get }
+    var screenTitle: Driver<String> { get }
 }
 
 extension EventListViewModelProtocol where Self: EventListViewModelInput & EventListViewModelOutput {

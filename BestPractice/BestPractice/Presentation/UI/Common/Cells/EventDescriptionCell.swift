@@ -5,7 +5,6 @@
 //  Created by Ruyther Costa on 13/06/22.
 //
 
-import Kingfisher
 import UIKit
 
 final class EventDescriptionCell: UICollectionViewCell {
@@ -131,12 +130,12 @@ extension EventDescriptionCell: Configurable {
     }
 
     func configure(content: Configuration) {
-        KF.url(content.eventImageURL)
-            .placeholder(Images.empty_image)
-            .loadDiskFileSynchronously()
-            .cacheMemoryOnly()
-            .fade(duration: 0.25)
-            .set(to: self.eventImageView)
+//        KF.url(content.eventImageURL)
+//            .placeholder(Images.empty_image)
+//            .loadDiskFileSynchronously()
+//            .cacheMemoryOnly()
+//            .fade(duration: 0.25)
+//            .set(to: self.eventImageView)
 
         eventTitleLabel.text = content.eventTitleText
         eventDescriptionLabel.text = content.eventDescriptionText

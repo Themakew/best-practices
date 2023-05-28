@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxCocoa
 import RxSwift
 
 final class EventListViewModel: EventListViewModelProtocol, EventListViewModelInput, EventListViewModelOutput {
@@ -21,6 +22,7 @@ final class EventListViewModel: EventListViewModelProtocol, EventListViewModelIn
     }
 
     let dataSource = ReplaySubject<DataSource>.create(bufferSize: 1)
+    let screenTitle: Driver = .just(LocalizableStrings.events)
 
     // MARK: - Internal properties
 
